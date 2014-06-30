@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+        <title>Thymeleaf Page that depends on Model populated by controller</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" th:href="@{/css/main.css}"/>
+
+</head>
+<body>
+<!-- <img src="../../images/test.png" th:attr="src=@{images/test.png}"/> -->
+    <h2 th:text="${title}">Title</h2>
+</body>
+</html>
