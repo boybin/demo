@@ -10,7 +10,7 @@ import com.app.config.DispatcherConfig;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.app.controller"})
+@ComponentScan(basePackages = {"com.app.controller","com.app.services", "com.app.services.impl"})
 @Import({WebAppInitializer.class, DispatcherConfig.class})
 public class Application {
 
