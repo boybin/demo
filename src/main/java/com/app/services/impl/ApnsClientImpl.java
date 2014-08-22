@@ -42,7 +42,7 @@ public class ApnsClientImpl implements ApnsClient {
 		PushManagerFactory<SimpleApnsPushNotification> pushManagerFactory;
 		try {
 			
-			String keystoreFile="iPadBooks-public-production.p12";
+			String keystoreFile="com.ankitkhanal.ch.dev.p12";//"iPadBooks-public-production.p12";
 			String keystorePassword="12345";
 			
 			InputStream keystoreInputStream = ApnsClientImpl.class.getClassLoader().getResourceAsStream(keystoreFile);
@@ -52,7 +52,7 @@ public class ApnsClientImpl implements ApnsClient {
 			SSLContext sslContext = PushManagerFactory.createDefaultSSLContext(keyStore, keystorePassword != null ? keystorePassword.toCharArray() : null);
 			
 			pushManagerFactory = new PushManagerFactory<SimpleApnsPushNotification>(
-			        ApnsEnvironment.getProductionEnvironment(),
+			        ApnsEnvironment.getSandboxEnvironment(),
 			        sslContext);
 			pushManager =
 			        pushManagerFactory.buildPushManager();
